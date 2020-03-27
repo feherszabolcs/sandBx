@@ -25,6 +25,7 @@ export default class Content {
 
         // Kezd a kódolást innen -->
         res.write("<h2>Hello</h2>");
+        res.write("by.: Szabolcs");
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
