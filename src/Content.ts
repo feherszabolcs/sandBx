@@ -24,7 +24,7 @@ export default class Content {
         const params = url.parse(req.url as string, true).query;
 
         // Kezd a kódolást innen -->
-        res.write("<h2 style='color:red'>Hello</h2>");
+        res.write("<h2 style='color:red'>Hello</h2>"); // string literal
         res.write("by.: Szabolcs");
         // <---- Fejezd be a kódolást
 
