@@ -146,6 +146,46 @@ export default class Content {
                 else res.write("Azonosság !");
             }
         }
+        const nevek: string[] = ["Andi", "Anna", "bence", "én"];
+        for (let i = 0; i < nevek.length; i++) {
+            res.write(nevek[i] + "\n");
+        }
+        for (let i = nevek.length; i >= 0; i--) {
+            res.write(nevek[i] + "\n");
+        }
+        //vektorok
+        const szamok: number[] = [23, 67, 33, 77, 88, 73, 21, 20];
+        for (let i = 0; i < szamok.length; i++) {
+            res.write(`${szamok[i]}`);
+        }
+        res.write("\n");
+        res.write(szamok.toString() + "\n");
+        for (const i of szamok) {
+            res.write(`${i}`);
+        }
+        res.write("\n");
+
+        for (const i in szamok) {
+            const lastIndex: number = szamok.length - 1;
+            if (parseInt(i) != lastIndex) {
+                res.write(`${szamok[i]},`);
+            } else {
+                res.write(`${szamok[i]}`);
+            }
+        }
+        res.write("\n");
+
+        res.write(szamok.join(". "));
+
+        //szamok legnagyobb indexe értéke
+        //szélsőérték algorithm
+
+        let maxI = 0;
+        for (let i = 0; i < szamok.length; i++) {
+            if (szamok[i] > szamok[maxI]) {
+                maxI = i;
+            }
+        }
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
